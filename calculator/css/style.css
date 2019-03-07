@@ -1,0 +1,80 @@
+/****************
+Primary color: #0F0F0F
+Secondary color : #FB5353;
+Green: 09A490
+*********/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Source Sans Pro', sans-serif;
+background: rgba(89,78,190,.7);}
+.main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  
+}
+.outter{
+  display: block;
+  height: 400px;
+  width: 250px;
+  overflow: hidden;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 20px 5px rgba(0,0,0,.60);
+}
+.screen{
+  background: #0F0F0F;
+  width: 100%;
+  height: 40%;
+  position: relative;
+}
+.nav{
+  position: absolute;
+  top: 5%;
+  left: 2%;
+  cursor: pointer;
+}
+.nav div{
+  display: block;
+  width: 20px;
+  height: 2px;
+  background:#FB5353;
+  margin: 5px;
+  border-radius: 50px;
+  
+}
+.keypad{
+  font-size: 18px;
+  background: #0F0F0F;
+  color: rgba(250,250,250,.70);
+  height: 60%;
+  display: grid;
+  grid-template: repeat(5,1fr)/repeat(4, 1fr);
+}
+.button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 2px;
+  /* border: 1px solid rgba(0,0,0,.1); */
+  transition: all ease-in-out 300ms;
+}
+.equal{
+  grid-area: 5/3/6/5;
+}
+.equal, .clear{
+  background: rgba(251, 83, 83,.80);
+}
+.percent,.square,.divide,.multi,.plus,.minus{
+  color: #09A490;
+}
+.percent:hover,.square:hover,.divide:hover,.multi:hover,.plus:hover,.minus:hover{
+  background: rgb(9,164,144);
+  color: white;
+}
